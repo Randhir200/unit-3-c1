@@ -9,21 +9,46 @@
 
   <style>
     * {
-      margin: auto;
+      margin: 0;
     }
     #navbar {
       display: flex;
-      margin: 50px auto;
+      margin: 0px 0 50px;
+      background-color: teal;
+      padding: 10px;
+      justify-self: start;
+    }
+    #navbar > button {
+      background-color: teal;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
     }
     #all_products {
       display: grid;
-      grid-template-columns: repeat(3, 30%);
+      grid-template-columns: repeat(4, 22%);
       gap: 10px;
       justify-content: center;
     }
     #all_products > div {
       margin: auto;
       text-align: center;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    #all_products > div > p {
+      font-weight: 600;
+      text-align: center;
+      margin: 5px 0;
+    }
+    #all_products > div > button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      margin: 0 0 10px;
+      cursor: pointer;
+      border-radius: 6px;
     }
     #all_products > div > div > img {
       width: 50%;

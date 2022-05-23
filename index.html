@@ -7,50 +7,84 @@
     <title>Document</title>
   </head>
   <style>
-      *{
-        margin: auto;
-      }
-      #navbar{
-        display:flex;
-        margin:50px auto;
-      }
-    body>div:nth-child(2){
-      width:500px;
-       margin:auto;
-       text-align: center;
+    * {
+      margin: 0;
     }
-    body>div:nth-child(2)>form>input{
-       display: flex;
-       flex-direction: column;
-       margin-top: 10px;
-       justify-content:center;
+    #navbar {
+      display: flex;
+      margin: 0px 0 50px;
+      background-color: teal;
+      padding: 10px;
+      justify-self: start;
+    }
+    #navbar > button {
+      background-color: teal;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+    }
+    body > div:nth-child(2) {
+      width: 500px;
+      margin: auto;
+      padding: 10px;
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      height: 280px;
+    }
+    body > div:nth-child(2) > h2 {
+      margin: 20px 0 0;
+    }
+    #products {
+      width: 80%;
+      margin: 0 auto;
+    }
+    body > div:nth-child(2) > form > input {
+      margin: auto;
+      width: 50%;
+      margin-top: 10px;
+      height: 28px;
+      display: flex;
+      border-radius: 6px;
+      border: 1px solid grey;
+    }
+    input::placeholder {
+      color: grey;
     }
 
-   #add_product{
-      margin-top: 10px;
+    #add_product {
+      margin-top: 15px;
+      background-color: teal;
+      border: none;
+      width: 42%;
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
     }
   </style>
   <body>
     <div id="navbar">
       <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
       <button onclick="show_products()" id="show_products">
-      Show Products</button>
+        Show Products
+      </button>
     </div>
     <div>
       <h2>Add Products</h2>
       <!--Create a form here to accept product data from user, give form HTML id as "products"-->
       <form id="products">
-          <input type="text" id="type" placeholder="type">
-          <input type="text" id="desc" placeholder="description">
-          <input type="number" id="price" placeholder="price">
-          <input type="url" id="image" placeholder="image url">
+        <input type="text" id="type" placeholder="type" />
+        <input type="text" id="desc" placeholder="description" />
+        <input type="number" id="price" placeholder="price" />
+        <input type="url" id="image" placeholder="image url" />
 
-        </form>
-        <button onclick="addProduct()" id="add_product">Add Product</button>
-      <!--Create four inputs to accept Type, Description, price, & image-->
-      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
-      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+        <!--Create four inputs to accept Type, Description, price, & image-->
+        <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+        <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
       </form>
+      <button onclick="addProduct()" id="add_product">Add Product</button>
     </div>
   </body>
 </html>

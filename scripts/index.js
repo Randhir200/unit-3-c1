@@ -1,11 +1,6 @@
 //store the products array in localstorage as "products"
 
-function StoreData(t, d, p, i) {
-  this.type = t;
-  this.desc = d;
-  this.price = p;
-  this.image = i;
-}
+
 
 // variables
 let productsArr = JSON.parse(localStorage.getItem('products')) || [];
@@ -13,6 +8,16 @@ let addBtn = document.querySelector('#add_products');
 let form = document.querySelector('#products');
 
 // functions
+
+//constructor function
+function StoreData(t, d, p, i) {
+    this.type = t;
+    this.desc = d;
+    this.price = p;
+    this.image = i;
+  }
+  
+// add product to localStorage
 function addProduct() {
   let t = form.type.value;
   let d = form.desc.value;
@@ -28,6 +33,7 @@ function addProduct() {
   form.type.value = '' 
 }
 
+// redirect 
 function show_products(){
     window.location.href = "inventory.html"
 }
