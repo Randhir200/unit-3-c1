@@ -20,10 +20,10 @@ function display(data) {
     let desc = document.createElement('p');
     desc.innerText = ele.desc;
     let price = document.createElement('p');
-    price.innerText = ele.price;
+    price.innerText = `₹ ${ele.price}`;
     let removeBtn = document.createElement('button');
     removeBtn.innerText = 'Remove';
-    removeBtn.id = "remove_product"
+    removeBtn.id = 'remove_product';
     removeBtn.addEventListener('click', function () {
       remove(ele, i);
     });
